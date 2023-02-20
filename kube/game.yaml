@@ -1,0 +1,8 @@
+apiVersion: tradokkio-operator.tradokk.io/v1alpha1
+kind: Game
+metadata:
+  name: make-stickers2
+spec:
+  name: Make Stickers2
+  description: People wont like you otherwise.
+  state: Completed

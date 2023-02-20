@@ -1,0 +1,5 @@
+{
+    "yaml.schemas": {
+        "kubernetes://schema/v1%40serviceaccount": "file:///Users/alexlarentis/projects/game/gameserver_umbrella/apps/gameserver_operator/manifest.yaml"
+    }
+}

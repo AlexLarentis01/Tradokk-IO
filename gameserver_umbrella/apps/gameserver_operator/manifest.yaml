@@ -1,0 +1,95 @@
+---
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  labels: {}
+  name: games.tradokkio-operator.tradokk.io
+spec:
+  group: tradokkio-operator.tradokk.io
+  names:
+    kind: Game
+    plural: games
+    shortNames: []
+    singular: game
+  scope: Namespaced
+  versions:
+    - additionalPrinterColumns:
+        - description: Number of foos
+          jsonPath: .spec.foos
+          name: foos
+          type: integer
+      deprecated: false
+      deprecationWarning:
+      name: v1alpha1
+      schema:
+        openAPIV3Schema:
+          properties:
+            spec:
+              properties:
+                foos:
+                  type: integer
+              type: object
+            status: {}
+          type: object
+      served: true
+      storage: true
+      subresources:
+        status: {}
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    k8s-app: gameserver-operator
+  name: gameserver-operator
+rules:
+  - apiGroups:
+      - apiextensions.k8s.io
+    resources:
+      - customresourcedefinitions
+    verbs:
+      - '*'
+  - apiGroups:
+      - events.k8s.io
+    resources:
+      - events
+    verbs:
+      - '*'
+  - apiGroups:
+      - tradokkio-operator.tradokk.io
+    resources:
+      - games
+    verbs:
+      - '*'
+  - apiGroups:
+      - tradokkio-operator.tradokk.io
+    resources:
+      - games/status
+    verbs:
+      - '*'
+
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    k8s-app: gameserver-operator
+  name: gameserver-operator
+  namespace: default
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  labels:
+    k8s-app: gameserver-operator
+  name: gameserver-operator
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: gameserver-operator
+subjects:
+  - kind: ServiceAccount
+    name: gameserver-operator
+    namespace: default

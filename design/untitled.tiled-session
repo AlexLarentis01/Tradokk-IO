@@ -1,0 +1,46 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "earth_to_grass.tsx",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "earth_to_grass.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 11
+        },
+        "earth_to_water.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 5.5
+        },
+        "terrain.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.imagePath": "/Users/alexlarentis/Downloads/bonfire-master-2/example/assets/images/tile_random",
+    "map.fixedSize": false,
+    "map.orientation": null,
+    "map.renderOrder": null,
+    "openFiles": [
+        "earth_to_grass.tsx",
+        "earth_to_water.tsx"
+    ],
+    "project": "untitled.tiled-project",
+    "recentFiles": [
+        "earth_to_water.tsx",
+        "earth_to_grass.tsx",
+        "terrain.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    },
+    "tileset.type": 0
+}
