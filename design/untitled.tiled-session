@@ -7,6 +7,9 @@
     "expandedProjectPaths": [
     ],
     "fileStates": {
+        "Map_tiles.tsx": {
+            "dynamicWrapping": false
+        },
         "earth_to_grass.tsx": {
             "dynamicWrapping": false,
             "scaleInDock": 1,
@@ -23,7 +26,7 @@
             "scaleInEditor": 1
         }
     },
-    "last.imagePath": "/Users/alexlarentis/Downloads/bonfire-master-2/example/assets/images/tile_random",
+    "last.imagePath": "/Users/alexlarentis/Downloads/craftpix-net-280167-free-level-map-pixel-art-assets-pack/1 Tiles",
     "map.fixedSize": false,
     "map.orientation": null,
     "map.renderOrder": null,
